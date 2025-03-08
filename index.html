@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Minesweeper</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="settings">
+        <div id="light_dark">
+            <img id="sun" src="Img/sun.png">
+            <img id="moon" src="Img/moon.png">
+        </div>
+        <div id="diff">
+            <div>
+                <p>Easy</p>
+                <input id="easy" name="diff" type="radio" value=40>
+            </div>
+            <div>
+                <p>Medium</p>
+                <input id="medium" name="diff" type="radio" value=60>
+            </div>
+            <div>
+                <p>Hard</p>
+                <input id="hard" name="diff" type="radio" value=100>
+            </div>
+        </div>
+    </div>
+    <div id="game-panel">
+        <div id="panel">                            <!-- The upper panel -->
+            <div id="stamp-defuse"></div>
+            <button id="restart-button"></button>
+            <div id="stamp-time"></div>
+        </div>
+        <div id="landmine"></div>                   <!-- The lower panel -->
+    </div>
+<script src="script.js"></script>
+</body>
+</html>

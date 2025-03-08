@@ -1,0 +1,147 @@
+:root{                          /* color shortcuts */
+    --White: #f9f9f9;
+    --Gray: #cbcbcb;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+p{
+    font-family: 'Press Start 2P', 'Pixel Arial 11', 'Courier New', monospace;
+}
+
+body{                                   /* place the game-panel in the middle */
+    background-color: var(--White);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    min-width: 900px;
+    min-height: 800px;
+    overflow-x: auto;
+}
+
+#settings{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+#light_dark{
+    border: 4px #050505 solid;
+    border-radius: 30px;
+    background-color: #939393;
+    gap: 10px;
+    padding: 10px;
+    display: flex;
+    margin-bottom: 10px;
+}
+#diff{
+    border: 4px #050505 solid;
+    border-radius: 30px;
+    background-color: #939393;
+}
+
+#light_dark > img{
+    width: 50px;
+    height: 50px;
+}
+
+#diff > div{
+    gap: 10px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+@media screen and (max-width: 1250px) {
+    #settings{
+        display: flex;
+    }
+    #light_dark{
+        margin-bottom: 0;
+    }
+    #diff{
+        display: flex;
+    }
+}
+
+
+#game-panel{                                /* The lower panel */
+    border-right: 12px solid #868686;
+    border-bottom: 12px solid #868686;
+    border-top: 12px solid #b6b6b6;
+    border-left: 12px solid #b6b6b6;
+    position: relative;
+    height: 600px;
+    width: 900px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--Gray);
+}
+
+#panel{                                 /* The upper panel */
+    border-bottom: 12px solid #989898;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 120px;
+}
+
+#restart-button{                    /* The reset button */
+    width: 40px;
+    height: 40px;
+    background-image: url("Img/smile.png");
+    background-size: cover;
+}
+
+#stamp-defuse, #stamp-time{    /* The time and the defuse count */
+    background-color: #000000;
+    color: red;
+    padding: 6px;
+    margin: 0 30px;
+    font-size: xx-large;
+    border-radius: 25%;
+}
+
+/* align the blocks */
+#landmine{                  /* Row */
+    display: flex;
+    flex-direction: column;
+}
+#landmine > div{                /* Column */
+    display: flex;
+    flex-direction: row;
+}
+#landmine > div > div{                 /* The block itself */
+    position: relative;
+    width: 30px;
+    height: 30px;
+    align-items: center;
+}
+
+
+.block{                                /* All blocks except number blocks */
+    background-color: #9d9d9d;
+    background-size: cover;
+    border-bottom: 2px solid #7c7c7c;
+    border-right: 2px solid #7c7c7c;
+    border-top: 2px solid var(--White);
+    border-left: 2px solid var(--White);
+}
+
+.number-block{
+    user-select: none;
+    background-color: var(--White);
+    font-family: sans-serif;
+    border: 1px solid black;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
