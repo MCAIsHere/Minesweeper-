@@ -1,2 +1,2 @@
-# Minesweeper-
-A website that lets users play the classic Minesweeper game. 
+# Details about the Minesweeper: https://en.wikipedia.org/wiki/Minesweeper_(video_game)
+ 
